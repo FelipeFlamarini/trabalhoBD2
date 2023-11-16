@@ -23,10 +23,14 @@ const receita = [
 ];
 
 receita.forEach((receita) => {
-  const queryReceita = `INSERT INTO receitas (nome, estado_sigla, usuario_id) VALUES ('${receita.nome}', '${receita.estado_sigla}', ${receita.usuario_id})`;
+  const queryReceita = `INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT '${receita.nome}', '${receita.estado_sigla}', ${receita.usuario_id} WHERE NOT EXISTS (SELECT * FROM receitas WHERE nome = '${receita.nome}')`;
   const queryIngredientes = receita.ingredientes.map((ingrediente) => {
     return `INSERT INTO ingredientes (nome) SELECT ('${ingrediente.nome}') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = '${ingrediente.nome}')`;
   });
-  console.log(queryIngredientes.join(";\n") + ';');
-  console.log(queryReceita +  ';');
+  const queryReceitasIngredientes = receita.ingredientes.map((ingrediente) => {
+    return `INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT (SELECT id FROM receitas WHERE nome = '${receita.nome}'), (SELECT nome FROM ingredientes WHERE nome = '${ingrediente.nome}'), ${ingrediente.quantidade}, '${ingrediente.unidade}' WHERE NOT EXISTS (SELECT * FROM receitas_ingredientes WHERE receita_id = (SELECT id FROM receitas WHERE nome = '${receita.nome}') AND ingrediente_nome = (SELECT nome FROM ingredientes WHERE nome = '${ingrediente.nome}'))`;
+  });
+  console.log(queryIngredientes.join(";\n") + ';\n');
+  console.log(queryReceita +  ';\n');
+  console.log(queryReceitasIngredientes.join(";\n") + ';\n');
 });

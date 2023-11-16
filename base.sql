@@ -77,19 +77,6 @@ CREATE TABLE
     );
 
 INSERT INTO
-    ingredientes (nome)
-VALUES
-    ('farinha de milho'),
-    ('farinha de mandioca'),
-    ('feijão'),
-    ('bacon'),
-    ('alho'),
-    ('cebola'),
-    ('arroz'),
-    ('porco grelhado');
-
-    
-INSERT INTO
     estados (nome, sigla)
 VALUES
     ('São Paulo', 'SP'),
