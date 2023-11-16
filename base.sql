@@ -73,7 +73,8 @@ CREATE TABLE
         paraPáscoa BOOLEAN DEFAULT FALSE,
         paraFestaJunina BOOLEAN DEFAULT FALSE,
         paraDiaDasCrianças BOOLEAN DEFAULT FALSE,
-        paraHalloween BOOLEAN DEFAULT FALSE
+        paraHalloween BOOLEAN DEFAULT FALSE,
+        paraAlmoço BOOLEAN DEFAULT FALSE
     );
 
 INSERT INTO

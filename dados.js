@@ -19,6 +19,12 @@ const receita = [
       { nome: "Cebola", quantidade: 1, unidade: "unidade" },
       { nome: "Óleo", quantidade: 50, unidade: "ml" },
     ],
+    caracteristicas: [ // as que são FALSE não precisa colocar
+      {éSalgado: true},
+      {paraAlmoço: true},
+      {paraJantar: true},
+      {éQuente: true},
+    ]
   },
 ];
 
@@ -30,7 +36,11 @@ receita.forEach((receita) => {
   const queryReceitasIngredientes = receita.ingredientes.map((ingrediente) => {
     return `INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT (SELECT id FROM receitas WHERE nome = '${receita.nome}'), (SELECT nome FROM ingredientes WHERE nome = '${ingrediente.nome}'), ${ingrediente.quantidade}, '${ingrediente.unidade}' WHERE NOT EXISTS (SELECT * FROM receitas_ingredientes WHERE receita_id = (SELECT id FROM receitas WHERE nome = '${receita.nome}') AND ingrediente_nome = (SELECT nome FROM ingredientes WHERE nome = '${ingrediente.nome}'))`;
   });
+  const queryCaracteristicas = receita.caracteristicas.map((caracteristica) => {
+
+  });
   console.log(queryIngredientes.join(";\n") + ';\n');
   console.log(queryReceita +  ';\n');
   console.log(queryReceitasIngredientes.join(";\n") + ';\n');
+  console.log(queryCaracteristicas.join(";\n") + ';\n');
 });
