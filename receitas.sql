@@ -128,8 +128,3 @@ VALUES
     ('Maria', 'maria@gmail.com', 'maria1234', 23),
     ('José', 'jose@gmail.com', 'jose4123', 7),
     ('Ana', 'ana@gmail.com', 'ana1234', 4);
-
-INSERT INTO
-    receitas (nome, estado, usuario_id)
-VALUES
-    ('Virado a Paulista', 1. 1);

@@ -6,7 +6,7 @@ const receita = [
   {
     "nome": "Virado à Paulista",
     "estado_sigla": "SP",
-    "usuario_id": 2,
+    "usuario_id": randomNumber(1, 4),
     "ingredientes": [
       {"nome": "Feijão", "quantidade": 500, "unidade": "g"},
       {"nome": "Arroz", "quantidade": 300, "unidade": "g"},
