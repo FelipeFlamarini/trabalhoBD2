@@ -1,50 +1,14 @@
-DROP TABLE IF EXISTS receitas;
+DROP TABLE IF EXISTS receitas CASCADE;
 
-DROP TABLE IF EXISTS ingredientes;
+DROP TABLE IF EXISTS ingredientes CASCADE;
 
-DROP TABLE IF EXISTS receitas_ingredientes;
+DROP TABLE IF EXISTS receitas_ingredientes CASCADE;
 
-DROP TABLE IF EXISTS usuarios;
+DROP TABLE IF EXISTS usuarios CASCADE;
 
-DROP TABLE IF EXISTS estados;
+DROP TABLE IF EXISTS estados CASCADE;
 
-DROP TABLE IF EXISTS caracteristicas;
-
-CREATE TABLE
-    receitas (
-        id SERIAL PRIMARY KEY,
-        nome VARCHAR(255) NOT NULL,
-        caracteristicas int NOT NULL,
-        FOREIGN KEY (caracteristicas) REFERENCES caracteristicas (id) estado INT NOT NULL,
-        FOREIGN KEY (estado) REFERENCES estados (id),
-        criadoPor int NOT NULL,
-        FOREIGN KEY (criadoPor) REFERENCES usuarios (id),
-    );
-
-CREATE TABLE
-    ingredientes (
-        id SERIAL PRIMARY KEY,
-        nome VARCHAR(255) NOT NULL,
-    );
-
-CREATE TABLE
-    receitas_ingredientes (
-        id SERIAL PRIMARY KEY,
-        receita INT NOT NULL,
-        FOREIGN KEY (receita) REFERENCES receitas (id),
-        ingrediente INT NOT NULL,
-        FOREIGN KEY (ingrediente) REFERENCES ingredientes (id),
-    );
-
-CREATE TABLE
-    usuarios (
-        id SERIAL PRIMARY KEY,
-        nome VARCHAR(255) NOT NULL,
-        email VARCHAR(255) NOT NULL,
-        senha VARCHAR(255) NOT NULL,
-        estado INT NOT NULL,
-        FOREIGN KEY (estado) REFERENCES estados (id),
-    );
+DROP TABLE IF EXISTS caracteristicas CASCADE;
 
 CREATE TABLE
     estados (
@@ -53,15 +17,78 @@ CREATE TABLE
         sigla VARCHAR(2) NOT NULL
     );
 
-INSERT INTO
-    TABLE ingredientes (nome)
-VALUES
-    ('frango') ('carne') ('queijo') ('presunto') ('ovo') ('alface') ('tomate') ('cebola') ('picles') ('pepino') ('molho especial') ('ketchup') ('mostarda') ('maionese') ('pão com gergelim') ('pão sem gergelim') ('pão de forma') ('pão de hambúrguer') ('pão de cachorro quente') ('pão de queijo') ('pão de batata') ('pão de alho') ('pão de milho') ('pão de centeio') ('pão de aveia') ('pão de trigo') ('pão de cevada');
+CREATE TABLE
+    usuarios (
+        id SERIAL PRIMARY KEY,
+        nome VARCHAR(255) NOT NULL,
+        email VARCHAR(255) NOT NULL,
+        senha VARCHAR(255) NOT NULL,
+        estado_id INT NOT NULL references estados (id)
+    );
+
+CREATE TABLE
+    ingredientes (id SERIAL PRIMARY KEY, nome VARCHAR(255) NOT NULL);
+
+CREATE TABLE
+    receitas (
+        id SERIAL PRIMARY KEY,
+        nome VARCHAR(255) NOT NULL,
+        estado_sigla VARCHAR(2) NOT NULL REFERENCES estados (sigla),
+        usuario_id int NOT NULL REFERENCES usuarios (id)
+    );
+
+CREATE TABLE
+    receitas_ingredientes (
+        id SERIAL PRIMARY KEY,
+        receita_nome INT NOT NULL REFERENCES receitas (nome),
+        ingrediente_nome INT NOT NULL REFERENCES ingredientes (nome),
+        quantidade INT NOT NULL,
+        unidade VARCHAR(255) NOT NULL
+    );
+
+CREATE TABLE
+    caracteristicas (
+        receita_id SERIAL PRIMARY KEY REFERENCES receitas (id),
+        receita_nome VARCHAR(255) NOT NULL REFERENCES receitas (nome),
+        éDoce BOOLEAN DEFAULT FALSE,
+        éSalgado BOOLEAN DEFAULT FALSE,
+        éÁcido BOOLEAN DEFAULT FALSE,
+        éAmargo BOOLEAN DEFAULT FALSE,
+        éPicante BOOLEAN DEFAULT FALSE,
+        éAzedo BOOLEAN DEFAULT FALSE,
+        éFrio BOOLEAN DEFAULT FALSE,
+        éQuente BOOLEAN DEFAULT FALSE,
+        éMorno BOOLEAN DEFAULT FALSE,
+        éCrocante BOOLEAN DEFAULT FALSE,
+        éMacio BOOLEAN DEFAULT FALSE,
+        éLíquido BOOLEAN DEFAULT FALSE,
+        éPastoso BOOLEAN DEFAULT FALSE,
+        éSólido BOOLEAN DEFAULT FALSE,
+        éGorduroso BOOLEAN DEFAULT FALSE,
+        éFibroso BOOLEAN DEFAULT FALSE,
+        éFresco BOOLEAN DEFAULT FALSE,
+        éFermentado BOOLEAN DEFAULT FALSE,
+        paraNatal BOOLEAN DEFAULT FALSE,
+        paraAnoNovo BOOLEAN DEFAULT FALSE,
+        paraCarnaval BOOLEAN DEFAULT FALSE,
+        paraPáscoa BOOLEAN DEFAULT FALSE,
+        paraFestaJunina BOOLEAN DEFAULT FALSE,
+        paraDiaDasCrianças BOOLEAN DEFAULT FALSE,
+        paraHalloween BOOLEAN DEFAULT FALSE
+    );
 
 INSERT INTO
-    usuarios (nome, email, senha, estado)
+    ingredientes (nome)
 VALUES
-    ('João', 'joao@gmail.com', '123456', 1);
+    ('farinha de milho'),
+    ('farinha de mandioca'),
+    ('feijão'),
+    ('bacon'),
+    ('alho'),
+    ('cebola'),
+    ('arroz'),
+    ('porco grelhado')
+
 
 INSERT INTO
     estados (nome, sigla)
@@ -94,34 +121,15 @@ VALUES
     ('Amapá', 'AP'),
     ('Roraima', 'RR');
 
-CREATE TABLE
-    caracteristicas (
-        id SERIAL PRIMARY FOREIGN KEY,
-        nome VARCHAR(255) NOT NULL,
-        éDoce BOOLEAN,
-        éSalgado BOOLEAN,
-        éÁcido BOOLEAN,
-        éAmargo BOOLEAN,
-        éPicante BOOLEAN,
-        éAzedo BOOLEAN,
-        éFrio BOOLEAN,
-        éQuente BOOLEAN,
-        éMorno BOOLEAN,
-        éCrocante BOOLEAN,
-        éMacio BOOLEAN,
-        éLíquido BOOLEAN,
-        éPastoso BOOLEAN,
-        éSólido BOOLEAN,
-        éGorduroso BOOLEAN,
-        éFibroso BOOLEAN,
-        éFresco BOOLEAN,
-        éFermentado BOOLEAN,
-        paraNatal BOOLEAN,
-        paraAnoNovo BOOLEAN,
-        paraCarnaval BOOLEAN,
-        paraPáscoa BOOLEAN,
-        paraFestaJunina BOOLEAN,
-        paraDiaDasCrianças BOOLEAN,
-        paraHalloween BOOLEAN,
-        paraNatal BOOLEAN,
-    );
+INSERT INTO
+    usuarios (nome, email, senha, estado_id)
+VALUES
+    ('João', 'joao@gmail.com', 'joao4234', 12),
+    ('Maria', 'maria@gmail.com', 'maria1234', 23),
+    ('José', 'jose@gmail.com', 'jose4123', 7),
+    ('Ana', 'ana@gmail.com', 'ana1234', 4);
+
+INSERT INTO
+    receitas (nome, estado, usuario_id)
+VALUES
+    ('Virado a Paulista', 1. 1);
