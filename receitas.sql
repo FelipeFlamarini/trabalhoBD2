@@ -13,8 +13,8 @@ DROP TABLE IF EXISTS caracteristicas CASCADE;
 CREATE TABLE
     estados (
         id SERIAL PRIMARY KEY,
-        nome VARCHAR(255) NOT NULL,
-        sigla VARCHAR(2) NOT NULL
+        nome VARCHAR(255) NOT NULL UNIQUE,
+        sigla VARCHAR(2) NOT NULL UNIQUE
     );
 
 CREATE TABLE
@@ -27,7 +27,7 @@ CREATE TABLE
     );
 
 CREATE TABLE
-    ingredientes (id SERIAL PRIMARY KEY, nome VARCHAR(255) NOT NULL);
+    ingredientes (id SERIAL PRIMARY KEY, nome VARCHAR(255) NOT NULL UNIQUE);
 
 CREATE TABLE
     receitas (
@@ -40,8 +40,8 @@ CREATE TABLE
 CREATE TABLE
     receitas_ingredientes (
         id SERIAL PRIMARY KEY,
-        receita_nome INT NOT NULL REFERENCES receitas (nome),
-        ingrediente_nome INT NOT NULL REFERENCES ingredientes (nome),
+        receita_id INT NOT NULL REFERENCES receitas (id),
+        ingrediente_nome VARCHAR(255) NOT NULL REFERENCES ingredientes (nome),
         quantidade INT NOT NULL,
         unidade VARCHAR(255) NOT NULL
     );
@@ -49,7 +49,6 @@ CREATE TABLE
 CREATE TABLE
     caracteristicas (
         receita_id SERIAL PRIMARY KEY REFERENCES receitas (id),
-        receita_nome VARCHAR(255) NOT NULL REFERENCES receitas (nome),
         éDoce BOOLEAN DEFAULT FALSE,
         éSalgado BOOLEAN DEFAULT FALSE,
         éÁcido BOOLEAN DEFAULT FALSE,
@@ -87,9 +86,9 @@ VALUES
     ('alho'),
     ('cebola'),
     ('arroz'),
-    ('porco grelhado')
+    ('porco grelhado');
 
-
+    
 INSERT INTO
     estados (nome, sigla)
 VALUES
