@@ -23,7 +23,7 @@ CREATE TABLE
         nome VARCHAR(255) NOT NULL,
         email VARCHAR(255) NOT NULL,
         senha VARCHAR(255) NOT NULL,
-        estado_id INT NOT NULL references estados (id)
+        estado_sigla VARCHAR(2) NOT NULL REFERENCES estados (sigla)
     );
 
 CREATE TABLE
@@ -74,7 +74,8 @@ CREATE TABLE
         paraFestaJunina BOOLEAN DEFAULT FALSE,
         paraDiaDasCrianças BOOLEAN DEFAULT FALSE,
         paraHalloween BOOLEAN DEFAULT FALSE,
-        paraAlmoço BOOLEAN DEFAULT FALSE
+        paraAlmoço BOOLEAN DEFAULT FALSE,
+        paraJantar BOOLEAN DEFAULT FALSE
     );
 
 INSERT INTO
