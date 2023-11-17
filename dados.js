@@ -1,7 +1,11 @@
+// só rodar no node para gerar o arquivo dados.sql
+const fs = require("fs");
+
 function randomNumber(x, y) {
   return Math.floor(Math.random() * (y - x + 1)) + x;
 }
 
+let query = ` ;`;
 const receita = [
   {
     nome: "Virado à Paulista",
@@ -19,28 +23,48 @@ const receita = [
       { nome: "Cebola", quantidade: 1, unidade: "unidade" },
       { nome: "Óleo", quantidade: 50, unidade: "ml" },
     ],
-    caracteristicas: [ // as que são FALSE não precisa colocar
-      {éSalgado: true},
-      {paraAlmoço: true},
-      {paraJantar: true},
-      {éQuente: true},
-    ]
+    caracteristicas: [
+      // as que são FALSE não precisa colocar
+      { éSalgado: true },
+      { paraAlmoço: true },
+      { paraJantar: true },
+      { éQuente: true },
+    ],
   },
 ];
 
-receita.forEach((receita) => {
-  const queryReceita = `INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT '${receita.nome}', '${receita.estado_sigla}', ${receita.usuario_id} WHERE NOT EXISTS (SELECT * FROM receitas WHERE nome = '${receita.nome}')`;
-  const queryIngredientes = receita.ingredientes.map((ingrediente) => {
-    return `INSERT INTO ingredientes (nome) SELECT ('${ingrediente.nome}') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = '${ingrediente.nome}')`;
-  });
-  const queryReceitasIngredientes = receita.ingredientes.map((ingrediente) => {
-    return `INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT (SELECT id FROM receitas WHERE nome = '${receita.nome}'), (SELECT nome FROM ingredientes WHERE nome = '${ingrediente.nome}'), ${ingrediente.quantidade}, '${ingrediente.unidade}' WHERE NOT EXISTS (SELECT * FROM receitas_ingredientes WHERE receita_id = (SELECT id FROM receitas WHERE nome = '${receita.nome}') AND ingrediente_nome = (SELECT nome FROM ingredientes WHERE nome = '${ingrediente.nome}'))`;
-  });
-  const queryCaracteristicas = receita.caracteristicas.map((caracteristica) => {
+receita.forEach((receita, index) => {
+  const id = index + 1;
 
+  const queryReceita = `INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT '${receita.nome}', '${receita.estado_sigla}', ${receita.usuario_id};\n`;
+
+  const queryIngredientes = receita.ingredientes.map((ingrediente) => {
+    return `INSERT INTO ingredientes (nome) SELECT ('${ingrediente.nome}') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = '${ingrediente.nome}');\n`;
   });
-  console.log(queryIngredientes.join(";\n") + ';\n');
-  console.log(queryReceita +  ';\n');
-  console.log(queryReceitasIngredientes.join(";\n") + ';\n');
-  console.log(queryCaracteristicas.join(";\n") + ';\n');
+
+  const queryReceitasIngredientes = receita.ingredientes.map((ingrediente) => {
+    return `INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '${id}', '${ingrediente.nome}', ${ingrediente.quantidade}, '${ingrediente.unidade}';\n`;
+  });
+
+  const caracteristicasTrue = receita.caracteristicas.filter((caracteristica) => {
+    const key = Object.keys(caracteristica);
+    if (caracteristica[key]) {
+      return true;
+    }
+    return false;
+  });
+
+  const caracteristicasKeys = caracteristicasTrue.map((caracteristica) => {
+    return Object.keys(caracteristica)[0];
+  })
+
+  const caracteristicasValues = caracteristicasKeys.map(() => {
+    return true;
+  });
+
+  const queryCaracteristicas =  `INSERT INTO caracteristicas (${caracteristicasKeys.join(", ")}) SELECT ${caracteristicasValues.join(", ")};\n`;
+
+  query = `${queryReceita}${"\n"}${queryIngredientes.join("")}${"\n"}${queryReceitasIngredientes.join("")}${"\n"}${queryCaracteristicas}`;
 });
+
+fs.writeFileSync("./dados.sql", query);
