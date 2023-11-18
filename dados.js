@@ -228,6 +228,204 @@ const receita = [
       { éCrocante: true },
     ],
   },
+  {
+    nome: "Lentilha da Sorte",
+    estado_sigla: "RJ",
+    usuario_id: randomNumber(1, 4),
+    ingredientes: [
+      { nome: "Lentilha", quantidade: 500, unidade: "g" },
+      { nome: "Cebola", quantidade: 2, unidade: "unidades" },
+      { nome: "Alho", quantidade: 3, unidade: "dentes" },
+      { nome: "Caldo de legumes", quantidade: 1, unidade: "litro" },
+    ],
+    caracteristicas: [
+      { éSalgado: true },
+      { paraAnoNovo: true },
+      { éQuente: true },
+    ],
+  },{
+    nome: "Bolo de Rolo",
+    estado_sigla: "PE",
+    usuario_id: randomNumber(1, 4),
+    ingredientes: [
+      { nome: "Manteiga", quantidade: 200, unidade: "g" },
+      { nome: "Açúcar", quantidade: 200, unidade: "g" },
+      { nome: "Gemas", quantidade: 6, unidade: "unidades" },
+      { nome: "Farinha de trigo", quantidade: 200, unidade: "g" },
+      { nome: "Claras em neve", quantidade: 6, unidade: "unidades" },
+      { nome: "Goiabada", quantidade: 500, unidade: "g" },
+      { nome: "Água", quantidade: 0.5, unidade: "xícara" },
+    ],
+    caracteristicas: [
+      { éDoce: true },
+      { éFrio: true },
+    ],
+  },{
+    "nome": "Maniçoba",
+    "estado_sigla": "PA",
+    "usuario_id": "randomNumber(1, 4)",
+    "ingredientes": [
+      { "nome": "Folha de maniva moída (mandioca brava)", "quantidade": 3, "unidade": "kg" },
+      { "nome": "Toucinho", "quantidade": 0.5, "unidade": "kg" },
+      { "nome": "Charque (carne seca)", "quantidade": 0.5, "unidade": "kg" },
+      { "nome": "Linguiça portuguesa", "quantidade": 0.5, "unidade": "kg" },
+      { "nome": "Paio", "quantidade": 0.5, "unidade": "kg" },
+      { "nome": "Lombo de porco", "quantidade": 0.5, "unidade": "kg" },
+      { "nome": "Orelha de porco", "quantidade": 0.5, "unidade": "kg" },
+      { "nome": "Rabo de porco", "quantidade": 0.5, "unidade": "kg" },
+      { "nome": "Pé de porco", "quantidade": 0.5, "unidade": "kg" },
+      { "nome": "Sal", "quantidade": 1, "unidade": "pitada" }
+    ],
+    "caracteristicas": [
+      { "éSalgado": true },
+      { "paraAlmoço": true },
+      { "éQuente": true }
+    ]
+  },{
+    "nome": "Frango com Quiabo",
+    "estado_sigla": "MG",
+    "usuario_id": "randomNumber(1, 4)",
+    "ingredientes": [
+      { "nome": "Frango", "quantidade": 1, "unidade": "unidade" },
+      { "nome": "Quiabo", "quantidade": 500, "unidade": "g" },
+      { "nome": "Cebola", "quantidade": 1, "unidade": "unidade" },
+      { "nome": "Alho", "quantidade": 2, "unidade": "dentes" },
+      { "nome": "Pimenta", "quantidade": 1, "unidade": "pitada" },
+      { "nome": "Sal", "quantidade": 1, "unidade": "pitada" }
+    ],
+    "caracteristicas": [
+      { "éSalgado": true },
+      { "paraAlmoço": true },
+      { "éQuente": true }
+    ]
+  },{
+    "nome": "Chipa",
+    "estado_sigla": "MS",
+    "usuario_id": "randomNumber(1, 4)",
+    "ingredientes": [
+      { "nome": "Polvilho doce", "quantidade": 500, "unidade": "g" },
+      { "nome": "Queijo meia cura ralado", "quantidade": 500, "unidade": "g" },
+      { "nome": "Ovos", "quantidade": 5, "unidade": "unidades" },
+      { "nome": "Leite", "quantidade": 200, "unidade": "ml" },
+      { "nome": "Óleo", "quantidade": 100, "unidade": "ml" },
+      { "nome": "Sal", "quantidade": 1, "unidade": "pitada" }
+    ],
+    "caracteristicas": [
+      { "éSalgado": true },
+      { "paraAlmoço": true },
+      { "éQuente": true }
+    ]
+  },{
+    "nome": "Arroz Maria Isabel",
+    "estado_sigla": "MT",
+    "usuario_id": "randomNumber(1, 4)",
+    "ingredientes": [
+      { "nome": "Arroz", "quantidade": 500, "unidade": "g" },
+      { "nome": "Carne seca", "quantidade": 500, "unidade": "g" },
+      { "nome": "Cebola", "quantidade": 1, "unidade": "unidade" },
+      { "nome": "Alho", "quantidade": 2, "unidade": "dentes" },
+      { "nome": "Óleo", "quantidade": 50, "unidade": "ml" },
+      { "nome": "Sal", "quantidade": 1, "unidade": "pitada" }
+    ],
+    "caracteristicas": [
+      { "éSalgado": true },
+      { "paraAlmoço": true },
+      { "éQuente": true }
+    ]
+  },{
+    "nome": "Empadão",
+    "estado_sigla": "GO",
+    "usuario_id": "randomNumber(1, 4)",
+    "ingredientes": [
+      { "nome": "Farinha de trigo", "quantidade": 500, "unidade": "g" },
+      { "nome": "Manteiga", "quantidade": 200, "unidade": "g" },
+      { "nome": "Ovos", "quantidade": 2, "unidade": "unidades" },
+      { "nome": "Frango desfiado", "quantidade": 500, "unidade": "g" },
+      { "nome": "Creme de leite", "quantidade": 200, "unidade": "g" },
+      { "nome": "Sal", "quantidade": 1, "unidade": "pitada" }
+    ],
+    "caracteristicas": [
+      { "éSalgado": true },
+      { "paraAlmoço": true },
+      { "éQuente": true }
+    ]
+  },
+  {
+    "nome": "Paçoca de Carne com Banana",
+    "estado_sigla": "RR",
+    "usuario_id": "randomNumber(1, 4)",
+    "ingredientes": [
+      { "nome": "Carne de sol", "quantidade": 1, "unidade": "kg" },
+      { "nome": "Cebola", "quantidade": 1, "unidade": "unidade" },
+      { "nome": "Alho", "quantidade": 2, "unidade": "dentes" },
+      { "nome": "Óleo", "quantidade": 1, "unidade": "xícara" },
+      { "nome": "Farinha de mandioca", "quantidade": 0.5, "unidade": "kg" },
+      { "nome": "Banana", "quantidade": 2, "unidade": "unidades" }
+    ],
+    "caracteristicas": [
+      { "éSalgado": true },
+      { "paraAlmoço": true },
+      { "éQuente": true },
+      { "éMacio": true },
+      { "éSólido": true }
+    ]
+  },
+  {
+    "nome": "Pirarucu Rondon",
+    "estado_sigla": "RO",
+    "usuario_id": "randomNumber(1, 4)",
+    "ingredientes": [
+      { "nome": "Pirarucu", "quantidade": 1, "unidade": "kg" },
+      { "nome": "Jambu", "quantidade": 1, "unidade": "maço" },
+      { "nome": "Macaxeira", "quantidade": 500, "unidade": "g" },
+      { "nome": "Batata doce", "quantidade": 500, "unidade": "g" },
+      { "nome": "Tucupi", "quantidade": 1, "unidade": "litro" }
+    ],
+    "caracteristicas": [
+      { "éSalgado": true },
+      { "paraAlmoço": true },
+      { "éQuente": true },
+      { "éMacio": true },
+      { "éSólido": true }
+    ]
+  },
+  {
+    "nome": "Ginga com Tapioca",
+    "estado_sigla": "RN",
+    "usuario_id": "randomNumber(1, 4)",
+    "ingredientes": [
+      { "nome": "Ginga (manjubinha)", "quantidade": 20, "unidade": "unidades" },
+      { "nome": "Farinha de tapioca", "quantidade": 500, "unidade": "g" },
+      { "nome": "Óleo", "quantidade": 1, "unidade": "xícara" },
+      { "nome": "Sal", "quantidade": 1, "unidade": "pitada" }
+    ],
+    "caracteristicas": [
+      { "éSalgado": true },
+      { "paraAlmoço": true },
+      { "éQuente": true },
+      { "éCrocante": true },
+      { "éSólido": true }
+    ]
+  },
+  {
+    "nome": "Paçoca de Carne de Sol",
+    "estado_sigla": "PI",
+    "usuario_id": "randomNumber(1, 4)",
+    "ingredientes": [
+      { "nome": "Carne de sol", "quantidade": 1, "unidade": "kg" },
+      { "nome": "Cebola", "quantidade": 1, "unidade": "unidade" },
+      { "nome": "Alho", "quantidade": 2, "unidade": "dentes" },
+      { "nome": "Óleo", "quantidade": 1, "unidade": "xícara" },
+      { "nome": "Farinha de mandioca", "quantidade": 0.5, "unidade": "kg" }
+    ],
+    "caracteristicas": [
+      { "éSalgado": true },
+      { "paraAlmoço": true },
+      { "éQuente": true },
+      { "éMacio": true },
+      { "éSólido": true }
+    ]
+  }
 ];
 
 receita.forEach((receita, index) => {
