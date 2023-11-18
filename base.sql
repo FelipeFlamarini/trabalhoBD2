@@ -76,7 +76,8 @@ CREATE TABLE
         paraDiaDasCrianças BOOLEAN DEFAULT FALSE,
         paraHalloween BOOLEAN DEFAULT FALSE,
         paraAlmoço BOOLEAN DEFAULT FALSE,
-        paraJantar BOOLEAN DEFAULT FALSE
+        paraJantar BOOLEAN DEFAULT FALSE,
+        paraAniversário BOOLEAN DEFAULT FALSE
     );
 
 INSERT INTO
