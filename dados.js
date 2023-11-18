@@ -211,7 +211,7 @@ const receita = [
     estado_sigla: "MG",
     usuario_id: randomNumber(1, 4),
     ingredientes: [
-      { nome: "Milho para canjica", quantidade: 500, unidade: "g" },
+      { nome: "Milho", quantidade: 500, unidade: "g" },
       { nome: "Leite", quantidade: 1, unidade: "l" },
       { nome: "Açúcar", quantidade: 200, unidade: "g" },
       { nome: "Canela em pau", quantidade: 2, unidade: "unidades" },
@@ -223,6 +223,7 @@ const receita = [
       { éQuente: true },
       { éLíquido: true },
       { paraJantar: true },
+      {paraFestaJunina: true},
     ],
   },
   {
@@ -299,6 +300,7 @@ const receita = [
     caracteristicas: [
       { éDoce: true },
       { éFrio: true },
+      { paraAniversário: true },
     ],
   },{
     "nome": "Maniçoba",
@@ -464,6 +466,242 @@ const receita = [
       { "éQuente": true },
       { "éMacio": true },
       { "éSólido": true }
+    ]
+  },
+  {
+    "nome": "Pernil de Porco Assado",
+    "estado_sigla": "SP",
+    "usuario_id": "randomNumber(1, 4)",
+    "ingredientes": [
+      { "nome": "Pernil de porco", "quantidade": 1, "unidade": "unidade" },
+      { "nome": "Suco de limão", "quantidade": 100, "unidade": "ml" },
+      { "nome": "Vinho branco", "quantidade": 200, "unidade": "ml" },
+      { "nome": "Vinagre de vinho branco", "quantidade": 50, "unidade": "ml" },
+      { "nome": "Farofa de Natal", "quantidade": 500, "unidade": "g" },
+      { "nome": "Arroz de brócolis", "quantidade": 500, "unidade": "g" }
+    ],
+    "caracteristicas": [
+      { "éSalgado": true },
+      { "paraNatal": true },
+      { "éQuente": true },
+      { "éMacio": true },
+      { "éSólido": true }
+    ]
+  },
+  {
+    "nome": "Bacalhau ao Forno",
+    "estado_sigla": "RJ",
+    "usuario_id": "randomNumber(1, 4)",
+    "ingredientes": [
+      { "nome": "Bacalhau", "quantidade": 500, "unidade": "g" },
+      { "nome": "Batatas", "quantidade": 500, "unidade": "g" },
+      { "nome": "Azeitonas", "quantidade": 100, "unidade": "g" }
+    ],
+    "caracteristicas": [
+      { "éSalgado": true },
+      { "paraNatal": true },
+      { "éQuente": true },
+      { "éMacio": true },
+      { "éSólido": true }
+    ]
+  },
+  {
+    "nome": "Pudim de Leite Condensado",
+    "estado_sigla": "MG",
+    "usuario_id": "randomNumber(1, 4)",
+    "ingredientes": [
+      { "nome": "Leite condensado", "quantidade": 1, "unidade": "lata" },
+      { "nome": "Leite", "quantidade": 1, "unidade": "lata" },
+      { "nome": "Ovos", "quantidade": 3, "unidade": "unidades" },
+      { "nome": "Açúcar", "quantidade": 1, "unidade": "xícara" }
+    ],
+    "caracteristicas": [
+      { "éDoce": true },
+      { "paraNatal": true },
+      { "éFrio": true },
+      { "éMacio": true },
+      { "éSólido": true }
+    ]
+  },
+  {
+    "nome": "Torta de Palmito",
+    "estado_sigla": "PR",
+    "usuario_id": "randomNumber(1, 4)",
+    "ingredientes": [
+      { "nome": "Palmito", "quantidade": 500, "unidade": "g" },
+      { "nome": "Cebola", "quantidade": 1, "unidade": "unidade" },
+      { "nome": "Alho", "quantidade": 2, "unidade": "dentes" },
+      { "nome": "Tomate", "quantidade": 2, "unidade": "unidades" },
+      { "nome": "Azeitonas", "quantidade": 100, "unidade": "g" },
+      { "nome": "Temperos", "quantidade": 1, "unidade": "pitada" }
+    ],
+    "caracteristicas": [
+      { "éSalgado": true },
+      { "paraNatal": true },
+      { "éQuente": true },
+      { "éMacio": true },
+      { "éSólido": true }
+    ]
+  },
+  {
+    "nome": "Arroz com Pequi",
+    "estado_sigla": "GO",
+    "usuario_id": "randomNumber(1, 4)",
+    "ingredientes": [
+      { "nome": "Arroz", "quantidade": 500, "unidade": "g" },
+      { "nome": "Pequi", "quantidade": 500, "unidade": "g" },
+      { "nome": "Alho", "quantidade": 2, "unidade": "dentes" },
+      { "nome": "Cebola", "quantidade": 1, "unidade": "unidade" },
+      { "nome": "Sal", "quantidade": 1, "unidade": "pitada" }
+    ],
+    "caracteristicas": [
+      { "éSalgado": true },
+      { "paraNatal": true },
+      { "éQuente": true },
+      { "éMacio": true },
+      { "éSólido": true }
+    ]
+  },
+  {
+    "nome": "Torta de Nozes",
+    "estado_sigla": "MG",
+    "usuario_id": "randomNumber(1, 4)",
+    "ingredientes": [
+      { "nome": "Nozes", "quantidade": 200, "unidade": "g" },
+      { "nome": "Açúcar", "quantidade": 200, "unidade": "g" },
+      { "nome": "Leite condensado", "quantidade": 1, "unidade": "lata" },
+      { "nome": "Creme de leite", "quantidade": 1, "unidade": "lata" },
+      { "nome": "Gelatina incolor", "quantidade": 1, "unidade": "pacote" }
+    ],
+    "caracteristicas": [
+      { "éDoce": true },
+      { "paraNatal": true },
+      { "éFrio": true },
+      { "éMacio": true },
+      { "éSólido": true }
+    ]
+  },
+  {
+    "nome": "Farofa de Castanha de Caju",
+    "estado_sigla": "CE",
+    "usuario_id": "randomNumber(1, 4)",
+    "ingredientes": [
+      { "nome": "Castanha de caju", "quantidade": 200, "unidade": "g" },
+      { "nome": "Farinha de mandioca", "quantidade": 500, "unidade": "g" },
+      { "nome": "Manteiga", "quantidade": 100, "unidade": "g" },
+      { "nome": "Cebola", "quantidade": 1, "unidade": "unidade" },
+      { "nome": "Alho", "quantidade": 2, "unidade": "dentes" },
+      { "nome": "Pimentão", "quantidade": 1, "unidade": "unidade" },
+      { "nome": "Tomate", "quantidade": 1, "unidade": "unidade" },
+      { "nome": "Salsinha", "quantidade": 1, "unidade": "maço" },
+      { "nome": "Cebolinha", "quantidade": 1, "unidade": "maço" }
+    ],
+    "caracteristicas": [
+      { "éSalgado": true },
+      { "paraNatal": true },
+      { "éQuente": true },
+      { "éCrocante": true },
+      { "éSólido": true }
+    ]
+  },
+  {
+    "nome": "Salpicão de Frango",
+    "estado_sigla": "RJ",
+    "usuario_id": "randomNumber(1, 4)",
+    "ingredientes": [
+      { "nome": "Frango desfiado", "quantidade": 500, "unidade": "g" },
+      { "nome": "Cenoura", "quantidade": 2, "unidade": "unidades" },
+      { "nome": "Milho", "quantidade": 200, "unidade": "g" },
+      { "nome": "Ervilha", "quantidade": 200, "unidade": "g" },
+      { "nome": "Maçã", "quantidade": 2, "unidade": "unidades" },
+      { "nome": "Uva-passa", "quantidade": 100, "unidade": "g" },
+      { "nome": "Maionese", "quantidade": 200, "unidade": "g" },
+      { "nome": "Creme de leite", "quantidade": 200, "unidade": "g" },
+      { "nome": "Batata palha", "quantidade": 200, "unidade": "g" },
+      { "nome": "Temperos", "quantidade": 1, "unidade": "pitada" }
+    ],
+    "caracteristicas": [
+      { "éSalgado": true },
+      { "paraNatal": true },
+      { "éFrio": true },
+      { "éMacio": true },
+      { "éSólido": true }
+    ]
+  },
+  {
+    "nome": "Lentilhas com Arroz",
+    "estado_sigla": "SP",
+    "usuario_id": "randomNumber(1, 4)",
+    "ingredientes": [
+      { "nome": "Lentilhas", "quantidade": 500, "unidade": "g" },
+      { "nome": "Arroz", "quantidade": 500, "unidade": "g" },
+      { "nome": "Bacon", "quantidade": 200, "unidade": "g" },
+      { "nome": "Linguiça calabresa", "quantidade": 200, "unidade": "g" },
+      { "nome": "Cebola", "quantidade": 1, "unidade": "unidade" },
+      { "nome": "Alho", "quantidade": 2, "unidade": "dentes" },
+      { "nome": "Tomate", "quantidade": 2, "unidade": "unidades" },
+      { "nome": "Salsinha", "quantidade": 1, "unidade": "maço" },
+      { "nome": "Cebolinha", "quantidade": 1, "unidade": "maço" }
+    ],
+    "caracteristicas": [
+      { "éSalgado": true },
+      { "paraAnoNovo": true },
+      { "éQuente": true },
+      { "éMacio": true },
+      { "éSólido": true }
+    ]
+  },
+  {
+    "nome": "Brigadeiro",
+    "estado_sigla": "RJ",
+    "usuario_id": "randomNumber(1, 4)",
+    "ingredientes": [
+      { "nome": "Leite condensado", "quantidade": 1, "unidade": "lata" },
+      { "nome": "Chocolate em pó", "quantidade": 2, "unidade": "colheres de sopa" },
+      { "nome": "Manteiga", "quantidade": 1, "unidade": "colher de sopa" },
+      { "nome": "Granulado", "quantidade": 100, "unidade": "g" }
+    ],
+    "caracteristicas": [
+      { "éDoce": true },
+      { "paraAniversário": true },
+      { "éFrio": true },
+      { "éMacio": true },
+      { "éSólido": true }
+    ]
+  },{
+    "nome": "Pamonha",
+    "estado_sigla": "GO",
+    "usuario_id": "randomNumber(1, 4)",
+    "ingredientes": [
+      { "nome": "Milho verde", "quantidade": 4, "unidade": "espigas" },
+      { "nome": "Leite", "quantidade": 1, "unidade": "xícara" },
+      { "nome": "Açúcar", "quantidade": 200, "unidade": "g" },
+      { "nome": "Canela", "quantidade": 1, "unidade": "colher de chá" }
+    ],
+    "caracteristicas": [
+      { "éDoce": true },
+      { "paraFestaJunina": true },
+      { "éQuente": true },
+      { "éMacio": true },
+      { "éPastoso": true }
+    ]
+  },{
+    "nome": "Arroz Doce",
+    "estado_sigla": "RS",
+    "usuario_id": "randomNumber(1, 4)",
+    "ingredientes": [
+      { "nome": "Arroz", "quantidade": 200, "unidade": "g" },
+      { "nome": "Leite", "quantidade": 1, "unidade": "litro" },
+      { "nome": "Açúcar", "quantidade": 200, "unidade": "g" },
+      { "nome": "Canela", "quantidade": 1, "unidade": "colher de chá" },
+      { "nome": "Cravo", "quantidade": 5, "unidade": "unidades" }
+    ],
+    "caracteristicas": [
+      { "éDoce": true },
+      { "paraFestaJunina": true },
+      { "éQuente": true },
+      { "éMacio": true },
+      { "éPastoso": true }
     ]
   }
 ];
