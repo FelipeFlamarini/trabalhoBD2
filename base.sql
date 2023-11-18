@@ -67,6 +67,7 @@ CREATE TABLE
         éFibroso BOOLEAN DEFAULT FALSE,
         éFresco BOOLEAN DEFAULT FALSE,
         éFermentado BOOLEAN DEFAULT FALSE,
+        éFrito BOOLEAN DEFAULT FALSE,
         paraNatal BOOLEAN DEFAULT FALSE,
         paraAnoNovo BOOLEAN DEFAULT FALSE,
         paraCarnaval BOOLEAN DEFAULT FALSE,
@@ -110,9 +111,9 @@ VALUES
     ('Roraima', 'RR');
 
 INSERT INTO
-    usuarios (nome, email, senha, estado_id)
+    usuarios (nome, email, senha, estado_sigla)
 VALUES
-    ('João', 'joao@gmail.com', 'joao4234', 12),
-    ('Maria', 'maria@gmail.com', 'maria1234', 23),
-    ('José', 'jose@gmail.com', 'jose4123', 7),
-    ('Ana', 'ana@gmail.com', 'ana1234', 4);
+    ('João', 'joao@gmail.com', 'joao4234', 'SP'),
+    ('Maria', 'maria@gmail.com', 'maria1234', 'BA'),
+    ('José', 'jose@gmail.com', 'jose4123', 'RJ'),
+    ('Ana', 'ana@gmail.com', 'ana1234', 'RS');

@@ -47,7 +47,12 @@ const receita = [
       { nome: "Alho", quantidade: 3, unidade: "dentes" },
       { nome: "Limão", quantidade: 1, unidade: "unidade" },
     ],
-    caracteristicas: [{ éSalgado: true }, { éÁcido: true }, { éQuente: true }],
+    caracteristicas: [
+      { éSalgado: true },
+      { éÁcido: true },
+      { éQuente: true },
+      { paraJantar: true },
+    ],
   },
   {
     // Receita 3 - Feijoada Baiana
@@ -64,7 +69,14 @@ const receita = [
       { nome: "Farofa", quantidade: 100, unidade: "g" },
       { nome: "Laranja", quantidade: 1, unidade: "unidade" },
     ],
-    caracteristicas: [{ éSalgado: true }, { éÁcido: true }, { éQuente: true }],
+    caracteristicas: [
+      { éSalgado: true },
+      { éÁcido: true },
+      { éQuente: true },
+      { éFibroso: true },
+      { paraAlmoço: true },
+      { paraJantar: true },
+    ],
   },
   {
     // Receita 4 - Churrasco Gaúcho
@@ -85,6 +97,8 @@ const receita = [
       { éSalgado: true },
       { éQuente: true },
       { éCrocante: true },
+      { paraAlmoço: true },
+      { paraJantar: true },
     ],
   },
   {
@@ -104,6 +118,7 @@ const receita = [
       { éSalgado: true },
       { éQuente: true },
       { éPicante: true },
+      { paraAlmoço: true },
     ],
   },
   {
@@ -121,7 +136,11 @@ const receita = [
       { nome: "Coentro", quantidade: 100, unidade: "g" },
       { nome: "Alho", quantidade: 3, unidade: "dentes" },
     ],
-    caracteristicas: [{ éSalgado: true }, { éÁcido: false }, { éQuente: true }],
+    caracteristicas: [
+      { éSalgado: true },
+      { éQuente: true },
+      { paraJantar: true },
+    ],
   },
   {
     // Receita 7 - Barreado no Paraná
@@ -141,6 +160,7 @@ const receita = [
       { éSalgado: true },
       { éQuente: true },
       { éFibroso: true },
+      { paraJantar: true },
     ],
   },
   {
@@ -157,7 +177,12 @@ const receita = [
       { nome: "Cebola", quantidade: 1, unidade: "unidade" },
       { nome: "Alho", quantidade: 3, unidade: "dentes" },
     ],
-    caracteristicas: [{ éSalgado: true }, { éQuente: true }, { éFresco: true }],
+    caracteristicas: [
+      { éSalgado: true },
+      { éQuente: true },
+      { éFresco: true },
+      { paraJantar: true },
+    ],
   },
   {
     // Receita 9 - Vatapá na Bahia
@@ -174,7 +199,11 @@ const receita = [
       { nome: "Alho", quantidade: 3, unidade: "dentes" },
       { nome: "Coentro", quantidade: 100, unidade: "g" },
     ],
-    caracteristicas: [{ éSalgado: true }, { éÁcido: false }, { éQuente: true }],
+    caracteristicas: [
+      { éSalgado: true },
+      { éQuente: true },
+      { paraJantar: true },
+    ],
   },
   {
     // Receita 10 - Canjica em Minas Gerais
@@ -189,7 +218,12 @@ const receita = [
       { nome: "Cravo-da-índia", quantidade: 5, unidade: "unidades" },
       { nome: "Coco ralado", quantidade: 100, unidade: "g" },
     ],
-    caracteristicas: [{ éDoce: true }, { éQuente: true }, { éLíquido: true }],
+    caracteristicas: [
+      { éDoce: true },
+      { éQuente: true },
+      { éLíquido: true },
+      { paraJantar: true },
+    ],
   },
   {
     // Receita 11 - Xinxim de Galinha na Bahia
@@ -207,7 +241,12 @@ const receita = [
       { nome: "Coentro", quantidade: 100, unidade: "g" },
       { nome: "Alho", quantidade: 3, unidade: "dentes" },
     ],
-    caracteristicas: [{ éSalgado: true }, { éÁcido: true }, { éQuente: true }],
+    caracteristicas: [
+      { éSalgado: true },
+      { éÁcido: true },
+      { éQuente: true },
+      { paraAlmoço: true },
+    ],
   },
   {
     // Receita 12 - Acarajé na Bahia
@@ -226,6 +265,7 @@ const receita = [
       { éPicante: true },
       { éFrito: true },
       { éCrocante: true },
+      { paraAlmoço: true },
     ],
   },
   {
@@ -428,6 +468,8 @@ const receita = [
   }
 ];
 
+let fullQuery = "";
+
 receita.forEach((receita, index) => {
   const id = index + 1;
 
@@ -465,7 +507,11 @@ receita.forEach((receita, index) => {
 
   query = `${queryReceita}${"\n"}${queryIngredientes.join(
     ""
-  )}${"\n"}${queryReceitasIngredientes.join("")}${"\n"}${queryCaracteristicas}`;
+  )}${"\n"}${queryReceitasIngredientes.join(
+    ""
+  )}${"\n"}${queryCaracteristicas}\n`;
+
+  fullQuery += query;
 });
 
-fs.writeFileSync("./dados.sql", query);
+fs.writeFileSync("./dados.sql", fullQuery);
