@@ -1,8 +1,9 @@
 SELECT
+    receitas.id,
     receitas.nome,
-    receitas.estado_sigla,
-    usuarios.nome
+    receitas.estado_sigla
 FROM
     receitas
-JOIN usuarios ON receitas.usuario_id = usuarios.id
-WHERE receitas.nome ILIKE '%Acarajé'
+    JOIN usuarios ON receitas.usuario_id = usuarios.id
+WHERE
+    receitas.nome ILIKE '%Chipa%';

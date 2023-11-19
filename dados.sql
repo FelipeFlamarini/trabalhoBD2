@@ -1,4 +1,4 @@
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Virado à Paulista', 'SP', 3;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Virado à Paulista', 'SP', 1;
 
 INSERT INTO ingredientes (nome) SELECT ('Feijão') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Feijão');
 INSERT INTO ingredientes (nome) SELECT ('Arroz') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Arroz');
@@ -48,7 +48,7 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éSalgado, éÁcido, éQuente, paraJantar) SELECT true, true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Feijoada Baiana', 'BA', 1;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Feijoada Baiana', 'BA', 4;
 
 INSERT INTO ingredientes (nome) SELECT ('Feijão-preto') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Feijão-preto');
 INSERT INTO ingredientes (nome) SELECT ('Carne de porco') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Carne de porco');
@@ -70,7 +70,7 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éSalgado, éÁcido, éQuente, éFibroso, paraAlmoço, paraJantar) SELECT true, true, true, true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Churrasco Gaúcho', 'RS', 2;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Churrasco Gaúcho', 'RS', 1;
 
 INSERT INTO ingredientes (nome) SELECT ('Picanha') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Picanha');
 INSERT INTO ingredientes (nome) SELECT ('Sal grosso') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Sal grosso');
@@ -92,7 +92,7 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éSalgado, éQuente, éCrocante, paraAlmoço, paraJantar) SELECT true, true, true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Tacacá do Pará', 'PA', 1;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Tacacá do Pará', 'PA', 4;
 
 INSERT INTO ingredientes (nome) SELECT ('Tucupi') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Tucupi');
 INSERT INTO ingredientes (nome) SELECT ('Goma de tapioca') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Goma de tapioca');
@@ -132,7 +132,7 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éSalgado, éQuente, paraJantar) SELECT true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Barreado', 'PR', 2;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Barreado', 'PR', 4;
 
 INSERT INTO ingredientes (nome) SELECT ('Carne bovina') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Carne bovina');
 INSERT INTO ingredientes (nome) SELECT ('Farinha de mandioca') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Farinha de mandioca');
@@ -172,7 +172,7 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éSalgado, éQuente, éFresco, paraJantar) SELECT true, true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Vatapá', 'BA', 3;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Vatapá', 'BA', 1;
 
 INSERT INTO ingredientes (nome) SELECT ('Pão de forma') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Pão de forma');
 INSERT INTO ingredientes (nome) SELECT ('Camarão seco') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Camarão seco');
@@ -194,7 +194,7 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éSalgado, éQuente, paraJantar) SELECT true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Canjica', 'MG', 1;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Canjica', 'MG', 2;
 
 INSERT INTO ingredientes (nome) SELECT ('Milho') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Milho');
 INSERT INTO ingredientes (nome) SELECT ('Leite') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Leite');
@@ -212,7 +212,7 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éDoce, éQuente, éLíquido, paraJantar, paraFestaJunina) SELECT true, true, true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Xinxim de Galinha', 'BA', 1;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Xinxim de Galinha', 'BA', 2;
 
 INSERT INTO ingredientes (nome) SELECT ('Frango') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Frango');
 INSERT INTO ingredientes (nome) SELECT ('Amendoim') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Amendoim');
@@ -236,7 +236,7 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éSalgado, éÁcido, éQuente, paraAlmoço) SELECT true, true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Acarajé', 'BA', 4;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Acarajé', 'BA', 2;
 
 INSERT INTO ingredientes (nome) SELECT ('Feijão-fradinho') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Feijão-fradinho');
 INSERT INTO ingredientes (nome) SELECT ('Camarão seco') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Camarão seco');
@@ -266,7 +266,7 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éSalgado, paraAnoNovo, éQuente) SELECT true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Bolo de Rolo', 'PE', 3;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Bolo de Rolo', 'PE', 1;
 
 INSERT INTO ingredientes (nome) SELECT ('Manteiga') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Manteiga');
 INSERT INTO ingredientes (nome) SELECT ('Açúcar') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Açúcar');
@@ -286,7 +286,7 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éDoce, éFrio, paraAniversário) SELECT true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Maniçoba', 'PA', 2;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Maniçoba', 'PA', 3;
 
 INSERT INTO ingredientes (nome) SELECT ('Folha de maniva moída (mandioca brava)') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Folha de maniva moída (mandioca brava)');
 INSERT INTO ingredientes (nome) SELECT ('Toucinho') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Toucinho');
@@ -312,7 +312,7 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éSalgado, paraAlmoço, éQuente) SELECT true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Frango com Quiabo', 'MG', 4;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Frango com Quiabo', 'MG', 3;
 
 INSERT INTO ingredientes (nome) SELECT ('Frango') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Frango');
 INSERT INTO ingredientes (nome) SELECT ('Quiabo') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Quiabo');
@@ -330,18 +330,18 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éSalgado, paraAlmoço, éQuente) SELECT true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Chipa', 'MS', 1;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Chipa', 'MS', 3;
 
 INSERT INTO ingredientes (nome) SELECT ('Polvilho doce') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Polvilho doce');
 INSERT INTO ingredientes (nome) SELECT ('Queijo meia cura ralado') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Queijo meia cura ralado');
-INSERT INTO ingredientes (nome) SELECT ('Ovos') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Ovos');
+INSERT INTO ingredientes (nome) SELECT ('Ovo') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Ovo');
 INSERT INTO ingredientes (nome) SELECT ('Leite') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Leite');
 INSERT INTO ingredientes (nome) SELECT ('Óleo') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Óleo');
 INSERT INTO ingredientes (nome) SELECT ('Sal') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Sal');
 
 INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '17', 'Polvilho doce', 500, 'g';
 INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '17', 'Queijo meia cura ralado', 500, 'g';
-INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '17', 'Ovos', 5, 'unidades';
+INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '17', 'Ovo', 5, 'unidades';
 INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '17', 'Leite', 200, 'ml';
 INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '17', 'Óleo', 100, 'ml';
 INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '17', 'Sal', 1, 'pitada';
@@ -370,21 +370,21 @@ INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Empadão', 'GO', 2
 
 INSERT INTO ingredientes (nome) SELECT ('Farinha de trigo') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Farinha de trigo');
 INSERT INTO ingredientes (nome) SELECT ('Manteiga') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Manteiga');
-INSERT INTO ingredientes (nome) SELECT ('Ovos') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Ovos');
+INSERT INTO ingredientes (nome) SELECT ('Ovo') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Ovo');
 INSERT INTO ingredientes (nome) SELECT ('Frango desfiado') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Frango desfiado');
 INSERT INTO ingredientes (nome) SELECT ('Creme de leite') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Creme de leite');
 INSERT INTO ingredientes (nome) SELECT ('Sal') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Sal');
 
 INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '19', 'Farinha de trigo', 500, 'g';
 INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '19', 'Manteiga', 200, 'g';
-INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '19', 'Ovos', 2, 'unidades';
+INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '19', 'Ovo', 2, 'unidades';
 INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '19', 'Frango desfiado', 500, 'g';
 INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '19', 'Creme de leite', 200, 'g';
 INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '19', 'Sal', 1, 'pitada';
 
 INSERT INTO caracteristicas (éSalgado, paraAlmoço, éQuente) SELECT true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Paçoca de Carne com Banana', 'RR', 3;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Paçoca de Carne com Banana', 'RR', 2;
 
 INSERT INTO ingredientes (nome) SELECT ('Carne de sol') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Carne de sol');
 INSERT INTO ingredientes (nome) SELECT ('Cebola') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Cebola');
@@ -402,7 +402,7 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éSalgado, paraAlmoço, éQuente, éMacio, éSólido) SELECT true, true, true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Pirarucu Rondon', 'RO', 4;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Pirarucu Rondon', 'RO', 3;
 
 INSERT INTO ingredientes (nome) SELECT ('Pirarucu') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Pirarucu');
 INSERT INTO ingredientes (nome) SELECT ('Jambu') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Jambu');
@@ -418,7 +418,7 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éSalgado, paraAlmoço, éQuente, éMacio, éSólido) SELECT true, true, true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Ginga com Tapioca', 'RN', 2;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Ginga com Tapioca', 'RN', 1;
 
 INSERT INTO ingredientes (nome) SELECT ('Ginga (manjubinha)') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Ginga (manjubinha)');
 INSERT INTO ingredientes (nome) SELECT ('Farinha de tapioca') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Farinha de tapioca');
@@ -432,7 +432,7 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éSalgado, paraAlmoço, éQuente, éCrocante, éSólido) SELECT true, true, true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Paçoca de Carne de Sol', 'PI', 2;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Paçoca de Carne de Sol', 'PI', 4;
 
 INSERT INTO ingredientes (nome) SELECT ('Carne de sol') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Carne de sol');
 INSERT INTO ingredientes (nome) SELECT ('Cebola') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Cebola');
@@ -448,7 +448,7 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éSalgado, paraAlmoço, éQuente, éMacio, éSólido) SELECT true, true, true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Pernil de Porco Assado', 'SP', 4;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Pernil de Porco Assado', 'SP', 1;
 
 INSERT INTO ingredientes (nome) SELECT ('Pernil de porco') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Pernil de porco');
 INSERT INTO ingredientes (nome) SELECT ('Suco de limão') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Suco de limão');
@@ -466,33 +466,33 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éSalgado, paraNatal, éQuente, éMacio, éSólido) SELECT true, true, true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Bacalhau ao Forno', 'RJ', 3;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Bacalhau ao Forno', 'RJ', 2;
 
 INSERT INTO ingredientes (nome) SELECT ('Bacalhau') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Bacalhau');
-INSERT INTO ingredientes (nome) SELECT ('Batatas') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Batatas');
+INSERT INTO ingredientes (nome) SELECT ('Batata') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Batata');
 INSERT INTO ingredientes (nome) SELECT ('Azeitonas') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Azeitonas');
 
 INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '25', 'Bacalhau', 500, 'g';
-INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '25', 'Batatas', 500, 'g';
+INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '25', 'Batata', 500, 'g';
 INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '25', 'Azeitonas', 100, 'g';
 
 INSERT INTO caracteristicas (éSalgado, paraNatal, éQuente, éMacio, éSólido) SELECT true, true, true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Pudim de Leite Condensado', 'MG', 1;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Pudim de Leite Condensado', 'MG', 2;
 
 INSERT INTO ingredientes (nome) SELECT ('Leite condensado') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Leite condensado');
 INSERT INTO ingredientes (nome) SELECT ('Leite') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Leite');
-INSERT INTO ingredientes (nome) SELECT ('Ovos') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Ovos');
+INSERT INTO ingredientes (nome) SELECT ('Ovo') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Ovo');
 INSERT INTO ingredientes (nome) SELECT ('Açúcar') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Açúcar');
 
 INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '26', 'Leite condensado', 1, 'lata';
 INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '26', 'Leite', 1, 'lata';
-INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '26', 'Ovos', 3, 'unidades';
+INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '26', 'Ovo', 3, 'unidades';
 INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, unidade) SELECT '26', 'Açúcar', 1, 'xícara';
 
 INSERT INTO caracteristicas (éDoce, paraNatal, éFrio, éMacio, éSólido) SELECT true, true, true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Torta de Palmito', 'PR', 3;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Torta de Palmito', 'PR', 2;
 
 INSERT INTO ingredientes (nome) SELECT ('Palmito') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Palmito');
 INSERT INTO ingredientes (nome) SELECT ('Cebola') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Cebola');
@@ -510,7 +510,7 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éSalgado, paraNatal, éQuente, éMacio, éSólido) SELECT true, true, true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Arroz com Pequi', 'GO', 4;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Arroz com Pequi', 'GO', 2;
 
 INSERT INTO ingredientes (nome) SELECT ('Arroz') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Arroz');
 INSERT INTO ingredientes (nome) SELECT ('Pequi') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Pequi');
@@ -542,7 +542,7 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éDoce, paraNatal, éFrio, éMacio, éSólido) SELECT true, true, true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Farofa de Castanha de Caju', 'CE', 4;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Farofa de Castanha de Caju', 'CE', 3;
 
 INSERT INTO ingredientes (nome) SELECT ('Castanha de caju') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Castanha de caju');
 INSERT INTO ingredientes (nome) SELECT ('Farinha de mandioca') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Farinha de mandioca');
@@ -566,7 +566,7 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éSalgado, paraNatal, éQuente, éCrocante, éSólido) SELECT true, true, true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Salpicão de Frango', 'RJ', 3;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Salpicão de Frango', 'RJ', 4;
 
 INSERT INTO ingredientes (nome) SELECT ('Frango desfiado') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Frango desfiado');
 INSERT INTO ingredientes (nome) SELECT ('Cenoura') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Cenoura');
@@ -616,7 +616,7 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éSalgado, paraAnoNovo, éQuente, éMacio, éSólido) SELECT true, true, true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Brigadeiro', 'RJ', 3;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Brigadeiro', 'RJ', 1;
 
 INSERT INTO ingredientes (nome) SELECT ('Leite condensado') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Leite condensado');
 INSERT INTO ingredientes (nome) SELECT ('Chocolate em pó') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Chocolate em pó');
@@ -630,7 +630,7 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éDoce, paraAniversário, éFrio, éMacio, éSólido) SELECT true, true, true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Pamonha', 'GO', 3;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Pamonha', 'GO', 1;
 
 INSERT INTO ingredientes (nome) SELECT ('Milho verde') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Milho verde');
 INSERT INTO ingredientes (nome) SELECT ('Leite') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Leite');
@@ -644,7 +644,7 @@ INSERT INTO receitas_ingredientes (receita_id, ingrediente_nome, quantidade, uni
 
 INSERT INTO caracteristicas (éDoce, paraFestaJunina, éQuente, éMacio, éPastoso) SELECT true, true, true, true, true;
 
-INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Arroz Doce', 'RS', 4;
+INSERT INTO receitas (nome, estado_sigla, usuario_id) SELECT 'Arroz Doce', 'RS', 3;
 
 INSERT INTO ingredientes (nome) SELECT ('Arroz') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Arroz');
 INSERT INTO ingredientes (nome) SELECT ('Leite') WHERE NOT EXISTS (SELECT * FROM ingredientes WHERE nome = 'Leite');
