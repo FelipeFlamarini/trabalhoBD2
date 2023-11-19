@@ -9,5 +9,5 @@ FROM
     receitas
     JOIN receitas_ingredientes ON receitas.id = receitas_ingredientes.receita_id
     JOIN usuarios ON receitas.usuario_id = usuarios.id
-WHERE receitas.id = 5;
--- WHERE receitas.nome ILIKE '%brigadeiro';
+WHERE
+    receitas_ingredientes.ingrediente_nome ILIKE '%Batata%';

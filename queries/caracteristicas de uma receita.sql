@@ -24,5 +24,5 @@ END;
 $$
 LANGUAGE plpgsql;
 
-SELECT receitas.nome, caracteristica FROM caracteristicasTrue(1)
-JOIN receitas on receitas.id = 1;
+SELECT receitas.nome, caracteristica FROM caracteristicasTrue(35)
+JOIN receitas on receitas.id = 35;

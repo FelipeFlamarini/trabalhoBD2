@@ -355,7 +355,7 @@ const receita = [
     ingredientes: [
       { nome: "Polvilho doce", quantidade: 500, unidade: "g" },
       { nome: "Queijo meia cura ralado", quantidade: 500, unidade: "g" },
-      { nome: "Ovos", quantidade: 5, unidade: "unidades" },
+      { nome: "Ovo", quantidade: 5, unidade: "unidades" },
       { nome: "Leite", quantidade: 200, unidade: "ml" },
       { nome: "Óleo", quantidade: 100, unidade: "ml" },
       { nome: "Sal", quantidade: 1, unidade: "pitada" },
@@ -391,7 +391,7 @@ const receita = [
     ingredientes: [
       { nome: "Farinha de trigo", quantidade: 500, unidade: "g" },
       { nome: "Manteiga", quantidade: 200, unidade: "g" },
-      { nome: "Ovos", quantidade: 2, unidade: "unidades" },
+      { nome: "Ovo", quantidade: 2, unidade: "unidades" },
       { nome: "Frango desfiado", quantidade: 500, unidade: "g" },
       { nome: "Creme de leite", quantidade: 200, unidade: "g" },
       { nome: "Sal", quantidade: 1, unidade: "pitada" },
@@ -504,7 +504,7 @@ const receita = [
     usuario_id: randomNumber(1, 4),
     ingredientes: [
       { nome: "Bacalhau", quantidade: 500, unidade: "g" },
-      { nome: "Batatas", quantidade: 500, unidade: "g" },
+      { nome: "Batata", quantidade: 500, unidade: "g" },
       { nome: "Azeitonas", quantidade: 100, unidade: "g" },
     ],
     caracteristicas: [
@@ -522,7 +522,7 @@ const receita = [
     ingredientes: [
       { nome: "Leite condensado", quantidade: 1, unidade: "lata" },
       { nome: "Leite", quantidade: 1, unidade: "lata" },
-      { nome: "Ovos", quantidade: 3, unidade: "unidades" },
+      { nome: "Ovo", quantidade: 3, unidade: "unidades" },
       { nome: "Açúcar", quantidade: 1, unidade: "xícara" },
     ],
     caracteristicas: [
